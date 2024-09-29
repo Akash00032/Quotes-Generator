@@ -1,0 +1,176 @@
+/* General Page Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #a1fbf9, #9985fb);
+    color: #fcf7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Quote Box Styling */
+.quote-box {
+    background: rgb(255, 253, 253);
+    border-radius: 16px;
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 8px 32px 0 rgba(4, 238, 168, 0.37);
+    backdrop-filter: blur(10px);
+    border: 5px solid rgba(9, 236, 244, 0.968);
+    color: #0f0f0f;
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.quote-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 36px rgba(9, 236, 244, 0.9);
+}
+
+/* Quote Text Styling */
+blockquote {
+    font-size: 1.8em;
+    font-style: italic;
+    margin: 0 0 20px;
+    letter-spacing: 1px;
+    animation: fadeQuoteIn 1s ease;
+}
+
+/* Author Styling */
+#author {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.2em;
+    opacity: 0.8;
+}
+
+/* Button Container */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Button Styling */
+button {
+    flex: 1;
+    background: linear-gradient(135deg, #0f2fe5, #0f63ff);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 120, 150, 0.4);
+    min-width: 100px;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ff6f91, #ff758c);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 120, 150, 0.5);
+}
+
+button img {
+    width: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* Saved Quotes Section */
+/* Add scroll functionality to the favorites section */
+.favorites {
+    margin-top: 30px;
+    max-height: 300px; /* Define the maximum height for the saved quotes */
+    overflow-y: auto;  /* Enable vertical scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+}
+
+.favorites ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+.favorites li {
+    background: rgba(74, 245, 228, 0.921);
+    color: #0a0a0a;
+    margin: 8px 0;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgb(174, 232, 17);
+    transition: transform 0.3s ease-in-out;
+}
+
+.favorites li:hover {
+    transform: translateY(-5px);
+}
+/* Scrollbar styling (optional) for a better look */
+.favorites::-webkit-scrollbar {
+    width: 10px;
+}
+
+.favorites::-webkit-scrollbar-thumb {
+    background-color: #9f9f9f;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .quote-box {
+        padding: 20px;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    blockquote {
+        font-size: 1.5em;
+    }
+
+    #author {
+        font-size: 1em;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    blockquote {
+        font-size: 1.2em;
+    }
+
+    #author {
+        font-size: 0.9em;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}
+
+/* Fade-in Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeQuoteIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}

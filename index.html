@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote of the Day</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="quote-box">
+        <h2>Quote of the Day</h2>
+
+        <!-- Display the fetched quote with a fade-in effect -->
+        <blockquote id="quote">Loading...</blockquote>
+        <span id="author">- Loading...</span>
+
+        <div class="buttons">
+            <button id="load-new-quote">Load New Quote</button>
+            <button id="tweet-quote"><img src="twitter.png" alt="Tweet"> Tweet</button>
+            <button id="share-quote">Share</button>
+            <button id="save-quote">Save</button>
+            <button onclick="toggleFavorites()">Show/Hide Saved Quotes</button>
+        </div>
+
+        <!-- Favorite Quotes Section -->
+        <div class="favorites" id="favorites-section" style="display:none;">
+            <h3>Your Saved Quotes</h3>
+            <ul id="favorite-quotes"></ul>
+        </div>
+
+        <!-- Loading indicator (initially hidden) -->
+        <div id="loading" style="display:none;">Loading...</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
